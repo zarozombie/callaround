@@ -3,5 +3,5 @@ This program is used to take in csv values formateed correctly to parse info and
 
 ## Install Instructions
 Requirements:
--Python3
--Pandas
+- Python3
+- Pandas
