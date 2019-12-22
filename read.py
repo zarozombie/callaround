@@ -5,7 +5,6 @@ from pandas import ExcelFile
 
 df = pd.read_csv('a.csv')
 data_f = pd.DataFrame(data=df)
-x = 0
 MALE = []
 FEMALE = []
 BOTH = []
@@ -53,24 +52,25 @@ class rand_sort:
 print("---------------------------\n\n")
 
 for y in range(len(MALE)):
-    print("y is = to", y)
+#    print("y is = to", y)
     temp_array = MALE
-    print("Male = ", MALE)
-#    del temp_array[y]
-    print(temp_array)
+#    print("Male = ", MALE)
+#    print(temp_array)
+
+#Display Male Random Results
     for x in range(data_f.values[MALE[y], 4]):
         print(data_f.values[MALE[y],1], "Will call", data_f.values[random.choice (temp_array), 1])
-    
 print("---------------------------\n\n")
 
 for y in range(len(FEMALE)):
+
+#Display Female Random Rsults    
     for x in range(data_f.values[FEMALE[y], 4]):
         print(data_f.values[FEMALE[y],1], "Will call", data_f.values[random.choice (FEMALE), 1])
-   
-
 print("---------------------------\n\n")
 
 for y in range(len(BOTH)):
+#Display Both Random Results
     for x in range(data_f.values[BOTH[y], 4]):
         print(data_f.values[BOTH[y],1], "Will call", data_f.values[random.choice (BOTH), 1])
 
