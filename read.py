@@ -59,6 +59,7 @@ for y in range(len(MALE)):
 
 #Display Male Random Results
     for x in range(data_f.values[MALE[y], 4]):
+        test = random.choice (temp_array)
         print(data_f.values[MALE[y],1], "Will call", data_f.values[random.choice (temp_array), 1])
 print("---------------------------\n\n")
 
