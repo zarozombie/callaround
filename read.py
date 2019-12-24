@@ -2,19 +2,24 @@ import random
 import pandas as pd
 from pandas import ExcelWriter
 from pandas import ExcelFile
+from itertools import filterfalse
 
 df = pd.read_csv('a.csv')
 data_f = pd.DataFrame(data=df)
 MALE = []
 FEMALE = []
 BOTH = []
-
 #print all data in table
 #print(data_f)
 
 
 #print("welcome to the call around program")
-#print("press ENTER to start")dd
+
+
+#print("press ENTER to start")
+
+
+text_start = input("press ENTER to start")
 #parsing while loop to sort 3 arrays (group by preference Male, Female, Both)i
 #possibally append to matrix array
 for x in range(int(len(data_f.values))-1):
@@ -49,16 +54,16 @@ class rand_sort:
 ####################################################################################
 
 #output Template for all random results
+sorted_groups = input("Groups are sorted press ENTER to randomly assign people to call")
+
 print("---------------------------\n\n")
 
 for y in range(len(MALE)):
-#    print("y is = to", y)
     temp_array = MALE
-#    print("Male = ", MALE)
-#    print(temp_array)
 
 #Display Male Random Results
     for x in range(data_f.values[MALE[y], 4]):
+#        MALE[:] = filterfalse(MALE[y], MALE)
         test = random.choice (temp_array)
         print(data_f.values[MALE[y],1], "Will call", data_f.values[random.choice (temp_array), 1])
 print("---------------------------\n\n")
